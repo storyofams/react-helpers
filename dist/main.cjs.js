@@ -19804,9 +19804,31 @@ function useBoolean(initial) {
   return [state, handlers];
 }
 
+var useOnClickOutside = function useOnClickOutside(ref, handler) {
+  react.useEffect(function () {
+    var listener = function listener(event) {
+      var _a;
+
+      if ((_a = ref === null || ref === void 0 ? void 0 : ref.current) === null || _a === void 0 ? void 0 : _a.contains(event.target)) {
+        return;
+      }
+
+      handler(event);
+    };
+
+    document.addEventListener('mousedown', listener);
+    document.addEventListener('touchstart', listener);
+    return function () {
+      document.removeEventListener('mousedown', listener);
+      document.removeEventListener('touchstart', listener);
+    };
+  }, [ref, handler]);
+};
+
 exports.errorLocations = errorLocations;
 exports.getError = getError;
 exports.handlePromise = handlePromise;
 exports.handlePromiseVerbose = handlePromiseVerbose;
 exports.useArray = useArray;
 exports.useBoolean = useBoolean;
+exports.useOnClickOutside = useOnClickOutside;

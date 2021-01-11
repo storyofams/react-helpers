@@ -1,5 +1,6 @@
 {
-  "name": "@storyofams/helpers",
+  "name": "@storyofams/react-helpers",
+  "description": "Collection of helpers and hooks to create a resilient front-end application with React.",
   "version": "0.1.1",
   "license": "MIT",
   "private": false,
