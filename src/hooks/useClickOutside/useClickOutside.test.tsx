@@ -1,9 +1,12 @@
 import React from 'react';
 import { useRef } from 'react';
-import { fireEvent, render } from '@testing-library/react';
+import { fireEvent, render } from '~lib';
 import { useOnClickOutside } from '.';
 
 describe('[hooks] useClickOutside', () => {
+  beforeEach(() => {
+    jest.restoreAllMocks();
+  });
   it('should call handler when clicked outside', () => {
     const mockFn = jest.fn();
 
