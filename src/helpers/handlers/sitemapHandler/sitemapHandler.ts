@@ -2,18 +2,15 @@ import { NextApiHandler } from 'next';
 import { SitemapItem, SitemapStream, streamToPromise } from 'sitemap';
 
 export interface SitemapData extends Partial<SitemapItem> {}
-
 export interface SitemapHandlerOptions {
   cacheMaxAge?: number;
 }
 
 /**
- *
- * @description This handler will generate a sitemap for NextJS applications based on the data you pass it.
- * You can use this handler within an api page.
+ * @description This handler will generate a sitemap for NextJS applications based on the data you pass it. You can use this handler within an api page.
  * @param dataFetcher An async function which returns the data to be used in the sitemap
- * @param {Object} [options] - Optional options.
- * @param {number} [options.cacheMaxAge] - The number of seconds the sitemap should be cached.
+ * @param options Optional options.
+ * @param options.cacheMaxAge The number of seconds the sitemap should be cached.
  * @example
  * // pages/api/sitemap.ts
  *
@@ -27,7 +24,18 @@ export interface SitemapHandlerOptions {
  *
  * export default sitemapHandler(dataFetcher, { cacheMaxAge: 60 });
  *
+ * // next.config.js
+ * module.exports = {
+ *  //...
+ *  async rewrites() {
+ *    return [
+ *      {source: '/sitemap.xml', destination: '/api/sitemap'},
+ *    ]
+ *  }
+ *  //...
+ * }
  *
+ * @returns A NextJS API handler
  */
 
 export const sitemapHandler: (
@@ -35,6 +43,7 @@ export const sitemapHandler: (
   options?: SitemapHandlerOptions,
 ) => NextApiHandler = (dataFetcher, options = {}) => async (req, res) => {
   try {
+    res.setHeader('Content-Type', 'text/xml');
     const data = await dataFetcher();
 
     if (options.cacheMaxAge) {

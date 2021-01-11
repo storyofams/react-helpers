@@ -15,6 +15,7 @@ describe('[handlers] sitemapHandler', () => {
       'cache-control',
       's-maxage=60, stale-while-revalidate',
     );
+    expect(res._getHeaders()).toHaveProperty('content-type', 'text/xml');
     expect(res._getData()).toContain('<loc>http://test.com/</loc>');
     expect(res._getData()).toContain(`<lastmod>${lastmod}</lastmod>`);
   });
