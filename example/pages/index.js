@@ -1,7 +1,6 @@
-import { useBoolean } from '@storyofams/helpers';
 import Head from 'next/head';
-
 import styles from '../styles/Home.module.css';
+import { useBoolean } from '@storyofams/react-helpers';
 
 export default function Home() {
   const [isOpen, { toggle }] = useBoolean(false);

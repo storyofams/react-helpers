@@ -1,34 +1,19 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<p align="center">
+  <a href="https://storyofams.com/" target="_blank" align="center">
+    <img src="https://storyofams.com/blog/story-of-ams-logo-small@3x.png" alt="Story of AMS" width="120">
+  </a>
+  <h1 align="center">@storyofams/react-helpers</h1>
+</p>
 
-## Getting Started
+# Description
 
-First, run the development server:
+Example app for `@storyofams/react-helpers`.
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+# Local development
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Make sure to use yarn! If you want to use npm you will have to adjust the package.json of this example (`link:` => `file:`).
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+If you develop a new example for the library make sure you run the following command in the example folder;
+```yarn install && cd node_modules/react && yarn | npm link && cd ../../```
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
-
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/import?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+And link react back to the module (root directory of react-helpers) `yarn link react`.
