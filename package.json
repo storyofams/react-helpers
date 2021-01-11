@@ -19,7 +19,7 @@
     "bundle": "rollup -c",
     "build": "npm run build:types && npm run bundle",
     "build:watch": "npm run bundle -- --watch",
-    "build:types": "tsc --noEmit",
+    "build:types": "tsc",
     "build:types:watch": "npm run build:types -- --watch"
   },
   "peerDependencies": {
