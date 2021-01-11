@@ -1,16 +1,14 @@
 {
   "name": "@storyofams/react-helpers",
   "description": "Collection of helpers and hooks to create a resilient front-end application with React.",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "license": "MIT",
-  "private": false,
-  "main": "dist/main.cjs.js",
-  "module": "dist/main.esm.js",
+  "main": "dist/index.js",
+  "module": "dist/index.es.js",
+  "jsnext:main": "dist/index.es.js",
   "types": "dist/index.d.ts",
-  "sideEffects": false,
   "files": [
-    "src",
-    "dist"
+    "/dist"
   ],
   "scripts": {
     "commit": "./node_modules/cz-customizable/standalone.js",
@@ -72,8 +70,6 @@
     "jest": "^24.3.0",
     "lint-staged": "^9.5.0",
     "prettier": "^2.0.5",
-    "react": "^17.0.1",
-    "react-dom": "^17.0.1",
     "react-test-renderer": "^16.13.1",
     "rollup": "^2.35.1",
     "rollup-plugin-peer-deps-external": "^2.2.4",

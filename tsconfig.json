@@ -23,6 +23,14 @@
     },
     "plugins": [{"transform": "@zerollup/ts-transform-paths"}]
   },
-  "exclude": ["node_modules"],
+  "exclude": [
+    "node_modules",
+    "build",
+    "dist",
+    "example",
+    "rollup.config.js",
+    "**/*.test.tsx",
+    "**/*.test.ts"
+  ],
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"]
 }
