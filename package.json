@@ -43,6 +43,7 @@
     "@rollup/plugin-babel": "^5.2.2",
     "@rollup/plugin-commonjs": "^17.0.0",
     "@rollup/plugin-node-resolve": "^11.0.1",
+    "@shopify/jest-dom-mocks": "^2.10.0",
     "@testing-library/cypress": "^7.0.1",
     "@testing-library/dom": "^7.24.3",
     "@testing-library/jest-dom": "^5.11.6",
