@@ -25,6 +25,7 @@
   },
   "exclude": [
     "node_modules",
+    "src/lib/test-utils",
     "build",
     "dist",
     "example",
