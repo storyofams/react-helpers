@@ -1,7 +1,12 @@
 import { NextApiHandler } from 'next';
 import { SitemapItem, SitemapStream, streamToPromise } from 'sitemap';
 
-export interface SitemapData extends Partial<SitemapItem> {}
+export interface SitemapHandlerData extends Partial<SitemapItem> {}
+
+export type SitemapHandlerDataFetcher = () =>
+  | Promise<SitemapHandlerData[]>
+  | SitemapHandlerData[];
+
 export interface SitemapHandlerOptions {
   cacheMaxAge?: number;
 }
@@ -39,7 +44,7 @@ export interface SitemapHandlerOptions {
  */
 
 export const sitemapHandler: (
-  dataFetcher: () => Promise<SitemapData[]> | SitemapData[],
+  dataFetcher: SitemapHandlerDataFetcher,
   options?: SitemapHandlerOptions,
 ) => NextApiHandler = (dataFetcher, options = {}) => async (req, res) => {
   try {
