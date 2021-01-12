@@ -30,8 +30,6 @@
     "dist",
     "example",
     "rollup.config.js",
-    "**/*.test.tsx",
-    "**/*.test.ts"
   ],
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"]
 }

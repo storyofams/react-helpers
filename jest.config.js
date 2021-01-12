@@ -5,9 +5,7 @@ module.exports = {
     '^.+\\.tsx?$': 'babel-jest',
   },
   moduleNameMapper: {
-    '^~lib(.*)$': '<rootDir>/src/lib$1',
-    '^~helpers(.*)$': '<rootDir>/src/helpers$1',
-    '^~hooks(.*)$': '<rootDir>/src/hooks$1',
+    '^~(.*)$': '<rootDir>/src/$1',
     '^~test-utils(.*)$': '<rootDir>/src/lib/test-utils$1',
     '\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$':
       '<rootDir>/file.mock.js',

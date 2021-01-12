@@ -2627,7 +2627,7 @@
   resolved "https://registry.yarnpkg.com/@types/minimist/-/minimist-1.2.1.tgz#283f669ff76d7b8260df8ab7a4262cc83d988256"
   integrity sha512-fZQQafSREFyuZcdWFAExYjBiCL7AUCdgsk80iO0q4yihYYdcIiH28CcuPTGFgLOCC8RlW49GSQxdHwZP+I7CNg==
 
-"@types/node@*":
+"@types/node@*", "@types/node@^14.14.14":
   version "14.14.20"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-14.14.20.tgz#f7974863edd21d1f8a494a73e8e2b3658615c340"
   integrity sha512-Y93R97Ouif9JEOWPIUyU+eyIdyRqQR0I8Ez1dzku4hDx34NWh4HbtIc3WNzwB1Y9ULvNGeu5B8h8bVL5cAk4/A==
@@ -2729,6 +2729,13 @@
   dependencies:
     "@types/prop-types" "*"
     csstype "^3.0.2"
+
+"@types/sax@^1.2.1":
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/@types/sax/-/sax-1.2.1.tgz#e0248be936ece791a82db1a57f3fb5f7c87e8172"
+  integrity sha512-dqYdvN7Sbw8QT/0Ci5rhjE4/iCMJEM0Y9rHpCu+gGXD9Lwbz28t6HI2yegsB6BoV1sShRMU6lAmAcgRjmFy7LA==
+  dependencies:
+    "@types/node" "*"
 
 "@types/source-list-map@*":
   version "0.1.2"
@@ -3323,6 +3330,11 @@ are-we-there-yet@~1.1.2:
   dependencies:
     delegates "^1.0.0"
     readable-stream "^2.0.6"
+
+arg@^5.0.0:
+  version "5.0.0"
+  resolved "https://registry.yarnpkg.com/arg/-/arg-5.0.0.tgz#a20e2bb5710e82950a516b3f933fee5ed478be90"
+  integrity sha512-4P8Zm2H+BRS+c/xX1LrHw0qKpEhdlZjLCgWy+d78T9vqa2Z2SiD2wMrYuWIAFy5IZUD7nnNXroRttz+0RzlrzQ==
 
 argparse@^1.0.7:
   version "1.0.10"
@@ -12069,6 +12081,16 @@ sisteransi@^1.0.5:
   version "1.0.5"
   resolved "https://registry.yarnpkg.com/sisteransi/-/sisteransi-1.0.5.tgz#134d681297756437cc05ca01370d3a7a571075ed"
   integrity sha512-bLGGlR1QxBcynn2d5YmDX4MGjlZvy2MRBDRNHLJ8VI6l6+9FUiyTFNJ0IveOSP0bcXgVDPRcfGqA0pjaqUpfVg==
+
+sitemap@^6.3.5:
+  version "6.3.5"
+  resolved "https://registry.yarnpkg.com/sitemap/-/sitemap-6.3.5.tgz#3d39618fa149f95303c151b8f884046695219c3f"
+  integrity sha512-uLz8c5nI31bd4/+nccVWhJx18JxLF+1bAKhhxMv0IYKClSK8wWtANKsl9FOluqmz37ObeBLGVVgNOpg3r+yz/g==
+  dependencies:
+    "@types/node" "^14.14.14"
+    "@types/sax" "^1.2.1"
+    arg "^5.0.0"
+    sax "^1.2.4"
 
 slash@^1.0.0:
   version "1.0.0"

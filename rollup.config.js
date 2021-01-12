@@ -28,6 +28,7 @@ export default {
     resolve({ extensions }),
     commonjs(),
     typescript({
+      tsconfig: './tsconfig.build.json',
       typescript: ttypescript,
     }),
     babel({
