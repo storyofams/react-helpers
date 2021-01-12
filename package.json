@@ -19,9 +19,9 @@
     "prettier": "prettier \"**/*.+(js|jsx|json|yml|yaml|css|ts|tsx|md|mdx)\"",
     "bundle": "rollup -c",
     "bundle:watch": "rollup -c -w",
-    "build": "npm run build-types && npm run bundle",
-    "build-types": "tsc",
-    "build-types:watch": "tsc --watch"
+    "build": "rimraf dist && npm run build-types && npm run bundle",
+    "build-types": "tsc --project tsconfig.build.json",
+    "build-types:watch": "tsc --project tsconfig.build.json --watch"
   },
   "peerDependencies": {
     "react": "^17.0.1",
