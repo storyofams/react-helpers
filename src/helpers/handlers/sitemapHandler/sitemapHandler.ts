@@ -34,7 +34,7 @@ export interface SitemapHandlerOptions {
  *  //...
  *  async rewrites() {
  *    return [
- *      {source: '/sitemap.xml', destination: '/api/sitemap'},
+ *      {source: '/sitemap.xml', destination: '/api/sitemap', permanent: true},
  *    ]
  *  }
  *  //...
