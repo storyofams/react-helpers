@@ -1,4 +1,7 @@
-import { sitemapHandler, SitemapHandlerDataFetcher } from '../../../../src';
+import {
+  sitemapHandler,
+  SitemapHandlerDataFetcher,
+} from '@storyofams/react-helpers';
 
 /**
  * Also make sure to implement the change in next.config.js for the sitemap redirect.
