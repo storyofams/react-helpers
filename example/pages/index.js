@@ -1,10 +1,8 @@
-import { useBoolean } from '@storyofams/helpers';
 import Head from 'next/head';
-
+import Link from 'next/link';
 import styles from '../styles/Home.module.css';
 
 export default function Home() {
-  const [isOpen, { toggle }] = useBoolean(false);
   return (
     <div className={styles.container}>
       <Head>
@@ -20,10 +18,13 @@ export default function Home() {
           </a>
         </h1>
 
-        <div>
-          <p>{isOpen ? 'open' : 'closed'}</p>
-          <button onClick={toggle}>Toggle</button>
-        </div>
+        <nav>
+          <ul>
+            <li>
+              <Link href="/examples/useBoolean">useBoolean</Link>
+            </li>
+          </ul>
+        </nav>
       </main>
 
       <footer className={styles.footer}>

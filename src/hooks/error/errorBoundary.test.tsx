@@ -60,15 +60,10 @@ describe('[hooks](state) useArray string[]', () => {
 
     act(() => fireEvent.click(screen.getByTestId('boom-btn')));
 
-    screen.debug();
-
-    // // Hook should provide didCatch and error
-    // expect(screen.getByText('got em')).toHaveTextContent();
-    // expect(screen.getByTestId('error-message')).toHaveTextContent(
-    //   ExplosionErrorMessage,
-    // );
+    expect(screen.getByText('got em')).toBeDefined();
+    expect(screen.getByText(ExplosionErrorMessage)).toBeDefined();
     expect(onDidCatch).toBeCalledTimes(1);
-    // React and testing-library calls console.error when a boundary catches
-    expect(console.error).toHaveBeenCalledTimes(2);
+    // internals calling this a few times more (react, testing-library, ?)
+    expect(console.error).toHaveBeenCalledTimes(3);
   });
 });

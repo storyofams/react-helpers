@@ -6,7 +6,7 @@ import ttypescript from 'ttypescript';
 
 import pkg from './package.json';
 
-const extensions = ['.jsx', '.ts'];
+const extensions = ['.tsx', '.ts'];
 
 export default {
   input: ['./src/index.ts'],
@@ -14,16 +14,21 @@ export default {
     {
       file: pkg.main,
       format: 'cjs',
+      exports: 'named',
+      sourcemap: true,
     },
     {
       file: pkg.module,
       format: 'es',
+      exports: 'named',
+      sourcemap: true,
     },
   ],
   plugins: [
     resolve({ extensions }),
     commonjs(),
     typescript({
+      tsconfig: './tsconfig.build.json',
       typescript: ttypescript,
     }),
     babel({
