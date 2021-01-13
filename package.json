@@ -19,9 +19,10 @@
     "prettier": "prettier \"**/*.+(js|jsx|json|yml|yaml|css|ts|tsx|md|mdx)\"",
     "bundle": "rollup -c",
     "bundle:watch": "rollup -c -w",
-    "build": "rimraf dist && npm run build-types && npm run bundle",
+    "build": "npm run build-types && npm run bundle",
     "build-types": "tsc --project tsconfig.build.json",
-    "build-types:watch": "tsc --project tsconfig.build.json --watch"
+    "build-types:watch": "tsc --project tsconfig.build.json --watch",
+    "prepublishOnly": "npm run build"
   },
   "peerDependencies": {
     "react": "^17.0.1",
@@ -80,7 +81,11 @@
     "react-dom": "^17.0.1",
     "react-test-renderer": "^16.13.1",
     "rollup": "^2.35.1",
+    "rollup-plugin-analyzer": "^4.0.0",
+    "rollup-plugin-clear": "^2.0.7",
+    "rollup-plugin-filesize": "^9.1.0",
     "rollup-plugin-peer-deps-external": "^2.2.4",
+    "rollup-plugin-terser": "^7.0.2",
     "rollup-plugin-typescript2": "^0.29.0",
     "ts-jest": "^25.0.0",
     "ts-loader": "^6.2.1",
