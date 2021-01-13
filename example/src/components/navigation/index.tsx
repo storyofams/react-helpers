@@ -18,6 +18,8 @@ export const Navigation = () => {
         <Link to="/examples/useArray">useArray</Link>
         <Link to="/examples/useErrorBoundary">useErrorBoundary</Link>
         <Link to="/examples/useOnClickOutside">useOnClickOutside</Link>
+        <Link to="/examples/handlePromise">handlePromise</Link>
+        <Link to="/examples/handlePromiseVerbose">handlePromiseVerbose</Link>
       </Stack>
     </Box>
   );
