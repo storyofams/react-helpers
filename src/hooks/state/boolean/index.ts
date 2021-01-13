@@ -1,6 +1,8 @@
 import { useState } from 'react';
 
-type UseBooleanReturn = [
+export function useBoolean(
+  initial: boolean = false,
+): [
   boolean,
   {
     set(v: boolean): void;
@@ -8,9 +10,7 @@ type UseBooleanReturn = [
     on(): void;
     off(): void;
   },
-];
-
-export function useBoolean(initial: boolean = false): UseBooleanReturn {
+] {
   const [state, setState] = useState(initial);
 
   const handlers = {

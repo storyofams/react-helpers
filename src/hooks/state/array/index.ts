@@ -1,6 +1,8 @@
 import { useState } from 'react';
 
-type UseArrayReturn<T> = [
+export function useArray<T>(
+  initial: T[] = [],
+): [
   T[],
   {
     add(value: T): void;
@@ -9,9 +11,7 @@ type UseArrayReturn<T> = [
     removeBy(value: T, key: string): void;
     toggleBy(value: T, key: string): void;
   },
-];
-
-export function useArray<T>(initial: T[] = []): UseArrayReturn<T> {
+] {
   const [state, setState] = useState(initial);
 
   const add = (value: T) => setState([...state, value]);
