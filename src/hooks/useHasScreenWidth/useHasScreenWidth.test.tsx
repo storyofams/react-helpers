@@ -1,6 +1,5 @@
 import { fireEvent } from '@testing-library/dom';
 import { act, renderHook } from '@testing-library/react-hooks';
-import { closetag } from 'sitemap/dist/lib/sitemap-stream';
 import { useHasScreenWidth } from './useHasScreenWidth';
 
 describe('[hooks] useHasScreenWidth', () => {
