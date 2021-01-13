@@ -4302,7 +4302,8 @@ escodegen@^1.9.1:
 
 "eslint-config-ams@git+https://github.com/storyofams/eslint-config-ams.git":
   version "1.0.0"
-  resolved "git+https://github.com/storyofams/eslint-config-ams.git#bd21fb7e91acec194ca447412db1a459c72fa9c5"
+  uid fa3a317c06af9c69071251058541c38273155bee
+  resolved "git+https://github.com/storyofams/eslint-config-ams.git#fa3a317c06af9c69071251058541c38273155bee"
 
 eslint-config-prettier@^6.11.0:
   version "6.15.0"
