@@ -1,7 +1,7 @@
 {
   "name": "@storyofams/react-helpers",
   "description": "Collection of helpers and hooks to create a resilient front-end application with React.",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "license": "MIT",
   "main": "dist/index.js",
   "module": "dist/index.es.js",
