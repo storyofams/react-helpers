@@ -10,7 +10,7 @@ describe('[hooks] useHasScreenWidth', () => {
     expect(result.current).toBeFalsy();
   });
 
-  it('should return true when screen screen width is narrower then max width', () => {
+  it('should return true when screen width is narrower then max width', () => {
     global.innerWidth = 1024;
     const { result } = renderHook(() => useHasScreenWidth(0, 1025));
     expect(result.current).toBeTruthy();
