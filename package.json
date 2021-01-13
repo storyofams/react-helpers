@@ -28,9 +28,7 @@
     "react": "^17.0.1",
     "react-dom": "^17.0.1"
   },
-  "dependencies": {
-    "sitemap": "^6.3.5"
-  },
+  "dependencies": {},
   "devDependencies": {
     "@babel/cli": "^7.8.3",
     "@babel/core": "^7.8.3",
@@ -74,8 +72,6 @@
     "husky": "^4.0.6",
     "jest": "^24.3.0",
     "lint-staged": "^9.5.0",
-    "next": "^10.0.5",
-    "node-mocks-http": "^1.9.0",
     "prettier": "^2.0.5",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",

@@ -9,9 +9,4 @@ module.exports = {
     });
     return config;
   },
-  async redirects() {
-    return [
-      { source: '/sitemap.xml', destination: '/api/sitemap', permanent: true },
-    ];
-  },
 };
