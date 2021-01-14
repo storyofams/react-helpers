@@ -1,0 +1,1 @@
+extends: "semantic-release-npm-github-publish"
