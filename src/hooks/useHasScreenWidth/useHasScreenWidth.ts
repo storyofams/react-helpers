@@ -12,5 +12,5 @@ export const useHasScreenWidth = (min: number, max?: number): boolean => {
     return () => window.removeEventListener('resize', setScreenWidthHandler);
   });
 
-  return min < screenWidth && (max !== undefined ? screenWidth < max : true);
+  return min <= screenWidth && (max === undefined || screenWidth <= max);
 };

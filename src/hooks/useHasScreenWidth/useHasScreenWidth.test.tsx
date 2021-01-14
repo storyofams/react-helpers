@@ -4,36 +4,42 @@ import { useHasScreenWidth } from './useHasScreenWidth';
 
 describe('[hooks] useHasScreenWidth', () => {
   it('should return false when screen width is wider than max width', () => {
-    global.innerWidth = 1024;
+    globalThis.innerWidth = 1024;
     const { result } = renderHook(() => useHasScreenWidth(0, 1023));
     expect(result.current).toBeFalsy();
   });
 
   it('should return true when screen width is narrower then max width', () => {
-    global.innerWidth = 1024;
+    globalThis.innerWidth = 1024;
     const { result } = renderHook(() => useHasScreenWidth(0, 1025));
     expect(result.current).toBeTruthy();
   });
 
   it('should return false when screen width is narrower than min width', () => {
-    global.innerWidth = 212;
+    globalThis.innerWidth = 212;
     const { result } = renderHook(() => useHasScreenWidth(213));
     expect(result.current).toBeFalsy();
   });
 
   it('should return true when screen width is wider than min width', () => {
-    global.innerWidth = 212;
+    globalThis.innerWidth = 212;
     const { result } = renderHook(() => useHasScreenWidth(211));
     expect(result.current).toBeTruthy();
   });
 
+  it('should return true when screen width is within range', () => {
+    globalThis.innerWidth = 212;
+    const { result } = renderHook(() => useHasScreenWidth(212, 212));
+    expect(result.current).toBeTruthy();
+  });
+
   it('should update when the window resizes', () => {
-    global.innerWidth = 212;
+    globalThis.innerWidth = 212;
     const { result } = renderHook(() => useHasScreenWidth(211));
     expect(result.current).toBeTruthy();
 
     act(() => {
-      global.innerWidth = 210;
+      globalThis.innerWidth = 210;
       fireEvent(window, new Event('resize'));
     });
 
