@@ -25,7 +25,7 @@
     "sourceMap": true,
     "target": "es5",
     "typeRoots": ["./node_modules/@types"],
-    "types": ["jest"]
+    "types": ["jest", "node"]
   },
   "exclude": [
     "node_modules",
