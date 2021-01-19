@@ -4038,9 +4038,9 @@ escodegen@^1.14.1:
     source-map "~0.6.1"
 
 "eslint-config-ams@git+https://github.com/storyofams/eslint-config-ams.git":
-  version "1.0.0"
-  uid cf7c2898e5942baff71a966939d0c19c78bcaf4e
-  resolved "git+https://github.com/storyofams/eslint-config-ams.git#cf7c2898e5942baff71a966939d0c19c78bcaf4e"
+  version "0.0.0-development"
+  uid ba58502072102454e257157c20d5da4155b6fb5f
+  resolved "git+https://github.com/storyofams/eslint-config-ams.git#ba58502072102454e257157c20d5da4155b6fb5f"
 
 eslint-config-prettier@7.1.0:
   version "7.1.0"
