@@ -47,7 +47,7 @@
     "@testing-library/cypress": "^7.0.1",
     "@testing-library/dom": "^7.24.3",
     "@testing-library/jest-dom": "^5.11.6",
-    "@testing-library/react": "^9.4.0",
+    "@testing-library/react": "^11.2.3",
     "@testing-library/react-hooks": "^3.4.2",
     "@testing-library/user-event": "^12.1.6",
     "@types/express": "^4.17.9",
