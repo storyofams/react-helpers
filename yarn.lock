@@ -3498,7 +3498,6 @@ cyclist@^1.0.1:
 
 "cz-customizable@git+https://github.com/storyofams/cz-customizable.git":
   version "0.0.0-development"
-  uid "7b23c3564982da9c85c2806693fce5d5c2a70e17"
   resolved "git+https://github.com/storyofams/cz-customizable.git#7b23c3564982da9c85c2806693fce5d5c2a70e17"
   dependencies:
     editor "1.0.0"
@@ -4039,7 +4038,6 @@ escodegen@^1.14.1:
 
 "eslint-config-ams@git+https://github.com/storyofams/eslint-config-ams.git":
   version "1.0.0"
-  uid cf7c2898e5942baff71a966939d0c19c78bcaf4e
   resolved "git+https://github.com/storyofams/eslint-config-ams.git#cf7c2898e5942baff71a966939d0c19c78bcaf4e"
 
 eslint-config-prettier@7.1.0:
@@ -6646,6 +6644,11 @@ lodash.escaperegexp@^4.1.2:
   version "4.1.2"
   resolved "https://registry.yarnpkg.com/lodash.escaperegexp/-/lodash.escaperegexp-4.1.2.tgz#64762c48618082518ac3df4ccf5d5886dae20347"
   integrity sha1-ZHYsSGGAglGKw99Mz11YhtriA0c=
+
+lodash.get@^4.4.2:
+  version "4.4.2"
+  resolved "https://registry.yarnpkg.com/lodash.get/-/lodash.get-4.4.2.tgz#2d177f652fa31e939b4438d5341499dfa3825e99"
+  integrity sha1-LRd/ZS+jHpObRDjVNBSZ36OCXpk=
 
 lodash.isequal@^4.5.0:
   version "4.5.0"
