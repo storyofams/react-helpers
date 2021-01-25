@@ -6,6 +6,26 @@
         "preset": "angular",
         "releaseRules": [
           {
+            "type": "chore",
+            "release": "patch"
+          },
+          {
+            "type": "refactor",
+            "release": "patch"
+          },
+          {
+            "type": "style",
+            "release": "patch"
+          }
+        ]
+      }
+    ],
+    [
+      "@semantic-release/release-notes-generator",
+      {
+        "preset": "angular",
+        "releaseRules": [
+          {
             "release": "patch",
             "type": "chore"
           },
@@ -20,8 +40,15 @@
         ]
       }
     ],
-    "@semantic-release/release-notes-generator",
+    "@semantic-release/changelog",
     "@semantic-release/npm",
-    "@semantic-release/github"
+    [
+      "@semantic-release/git",
+      {
+        "assets": ["CHANGELOG.md"],
+        "message": "release(version): Release ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}"
+      }
+    ],
+    "semantic-release/github"
   ]
 }
