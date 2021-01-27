@@ -28,6 +28,20 @@ describe('[hooks] useKeyPress', () => {
 
     expect(hook.result.current).toBeTruthy();
   });
+  it('should return true if the targetKey is pressed and not released', () => {
+    const hook = renderHook(useKeyPress, {
+      initialProps: targetKey,
+    });
+
+    expect(hook.result.current).toBeFalsy();
+
+    act(() => {
+      map.keydown({ key: targetKey });
+      map.keyup({ key: 'b' });
+    });
+
+    expect(hook.result.current).toBeTruthy();
+  });
   it('should return false if the targetKey is pressed and released', () => {
     const hook = renderHook(useKeyPress, {
       initialProps: targetKey,
@@ -42,6 +56,17 @@ describe('[hooks] useKeyPress', () => {
     act(() => {
       map.keyup({ key: targetKey });
     });
+    expect(hook.result.current).toBeFalsy();
+  });
+  it('should return false if the targetKey is not the key pressed', () => {
+    const hook = renderHook(useKeyPress, {
+      initialProps: targetKey,
+    });
+
+    act(() => {
+      map.keydown({ key: 'b' });
+    });
+
     expect(hook.result.current).toBeFalsy();
   });
 });
