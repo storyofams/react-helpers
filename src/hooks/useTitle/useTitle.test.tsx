@@ -1,5 +1,5 @@
 import { renderHook } from '@testing-library/react-hooks';
-import { useTitle } from './index';
+import { useTitle } from '~hooks';
 
 const beforeTitle = 'My page title';
 const afterTitle = 'My other page title';

@@ -1,6 +1,6 @@
 import { renderHook } from '@testing-library/react-hooks';
 
-import { useFavicon } from './index';
+import { useFavicon } from '~hooks';
 
 afterEach(() => {
   const favicon = document.querySelector("link[rel*='icon']");
