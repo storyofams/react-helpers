@@ -1,5 +1,5 @@
 import { act, renderHook } from '@testing-library/react-hooks';
-import { useKeyCombination } from './useKeyCombination';
+import { useKeyCombination } from './index';
 
 const targetCombination = ['a', 'b'];
 const callBack = jest.fn();

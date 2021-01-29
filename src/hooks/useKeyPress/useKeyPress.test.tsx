@@ -1,5 +1,5 @@
 import { act, renderHook } from '@testing-library/react-hooks';
-import { useKeyPress } from './useKeyPress';
+import { useKeyPress } from './index';
 
 const targetKey = 'a';
 
